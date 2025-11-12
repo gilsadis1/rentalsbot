@@ -1,0 +1,19 @@
+email:
+  smtp_host: "smtp.gmail.com"
+  smtp_port: 587
+  from_name: "דירות ת״א - עדכון יומי"
+  from_email: "gilsadis@gmail.com"
+  to_emails:
+    - "gilsadis@gmail.com"
+
+filters:
+  must_include_keywords: ["תל אביב", "ת"א"]
+  exclude_keywords: ["מרתף"]
+  min_rooms: 3
+  min_size_sqm: 120
+  max_price_nis: 30000
+
+sources:
+  - name: "Yad2 - מרכז צפון 4-6 חדרים 18000 ומעלה"
+    url: "https://www.yad2.co.il/realestate/rent?minPrice=18000&minRooms=4&bBox=32.067207%2C34.747759%2C32.098122%2C34.799549"
+    domain_hint: "yad2.co.il"
