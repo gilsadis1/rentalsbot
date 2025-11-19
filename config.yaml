@@ -17,6 +17,6 @@ filters:
   max_price_nis: 30000
 
 sources:
-  - name: "Yad2 - מרכז צפון 4-6 חדרים 18000 ומעלה"
-    url: "https://www.yad2.co.il/realestate/rent?minPrice=18000&minRooms=4&bBox=32.067207%2C34.747759%2C32.098122%2C34.799549"
+  - name: "Yad2 - יהודה מכבי 4-6 חדרים 18000 ומעלה"
+    url: "https://www.yad2.co.il/realestate/rent?minPrice=18000&minRooms=4&minSquaremeter=120&topArea=2&area=1&city=5000&neighborhood=1518&zoom=14&bBox=32.081062%2C34.769507%2C32.096520%2C34.795405"
     domain_hint: "yad2.co.il"
