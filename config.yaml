@@ -7,8 +7,11 @@ email:
     - "gilsadis@gmail.com"
 
 filters:
-  must_include_keywords: ["תל אביב", "ת"א"]
-  exclude_keywords: ["מרתף"]
+  must_include_keywords:
+    - "תל אביב"
+    - 'ת"א'
+  exclude_keywords:
+    - "מרתף"
   min_rooms: 3
   min_size_sqm: 120
   max_price_nis: 30000
