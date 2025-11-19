@@ -12,6 +12,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Restore seen listings DB
+        id: cache-seen-restore
+        uses: actions/cache/restore@v4
+        with:
+          path: seen_listings.sqlite3
+          key: seen-listings-${{ github.run_id }}
+          restore-keys: |
+            seen-listings-
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -34,3 +43,10 @@ jobs:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         run: |
           python main.py
+
+      - name: Save seen listings DB
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: seen_listings.sqlite3
+          key: seen-listings-${{ github.run_id }}

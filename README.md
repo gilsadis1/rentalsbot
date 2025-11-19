@@ -21,6 +21,12 @@ A tiny scraper that watches your saved search URLs (Yad2, Homeless, etc.), detec
 - Facebook groups are not supported (fragile & against ToS). Prefer site email alerts + add their inbox to your daily digest in a future Gmail-API version.
 - Respect each site's Terms of Service.
 
+## How “new listings only” works
+
+- Every run updates `seen_listings.sqlite3` with each listing URL it emails.
+- The GitHub Action restores that SQLite file from cache before running and saves it afterward, so each day only unseen links are sent.
+- If you ever want to reset the history (and receive every listing again), delete `seen_listings.sqlite3`, commit the removal, and push; the next run will start a fresh cache.
+
 ## Local test
 
 ```bash
