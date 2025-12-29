@@ -2,9 +2,9 @@ email:
   smtp_host: "smtp.gmail.com"
   smtp_port: 587
   from_name: "דירות ת״א - עדכון יומי"
-  from_email: "gilsadis@gmail.com"
+  from_email: "gilwillread@gmail.com"
   to_emails:
-    - "gilsadis@gmail.com"
+    - "gilwillread@gmail.com"
 
 filters:
   must_include_keywords:
